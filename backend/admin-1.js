@@ -11,7 +11,6 @@ var Files = [];
     const category = document.getElementById('catinp');
     const description = document.getElementById('desarea');
     const price = document.getElementById('priceinp');
-    // const stock = 1;
 
     const external_color = document.getElementById('external_color');
     const internal_color = document.getElementById('internal_color');
