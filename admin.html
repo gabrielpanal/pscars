@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product - PSCars</title>
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="shortcut icon" type="x-icon" href="images/logoIcon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+    
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navi_bar">
+                <div class="logo">
+                    <a class="navlogo" href="index.html"><img src="images/logo.png" width="125px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuList">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Shop</a></li>
+                    </ul>
+                </nav>
+                <img src="images/menu.png" class="menuIcon" onClick="toggleMenu()">       
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <h2>Add Product</h2>
+            <p>Complete all the fields</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="addprod-section" id="addproduct">
+            <label>Car Name</label> <input type="text" id="nameinp"> <br><br>
+            <label>Price</label> <input type="text" id="priceinp"><br><br>
+            <label>Product Details</label> <textarea id="desarea"></textarea><br><br>
+            <label>Category</label>
+            <select id="catinp">
+                <option value="luxury">Luxury</option>
+                <option value="vintage">Vintage</option>
+            </select><br><br>
+            <label>External Color</label> <input type="text" id="external_color"><br><br>
+            <label>Internal Color</label> <input type="text" id="internal_color"><br><br>
+            <label>Mileage</label> <input type="text" id="mileage"><br><br>
+            <label>Engine</label> <input type="text" id="engine"><br><br>
+            <label>Fuel</label> <input type="text" id="fuel"><br><br>
+            <label>Transmission</label> <input type="text" id="transmission"><br><br>
+
+            <div id="imagesDiv" class="imagesDivStyle"></div>
+
+            <div id="controldiv">
+                <label id="loadlab"></label>
+                <button id="addprodbtn" class="CTA">Add Product</button>
+                <button id="selimgbtn" class="CTA">Select Images</button>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-3">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>09772417913</li>
+                        <li>pscars@gmail.com</li>
+                        <li>2731 South Avenue 1200, Makati City, Philippines</li>
+                    </ul>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo.png">
+                    <p>We CARe for you and for your CAR.</p>
+                </div>
+                
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                        <li>TikTok</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2022- PSCars</p>
+        </div>
+    </div>
+
+<!--------js for toggle menu------------>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-storage.js"></script> -->
+<script type="module" src="backend/admin-1.js">
+</script>
+<script>
+    var MenuList = document.getElementById("MenuList");
+    var LoginForm = document.getElementById("LoginForm");
+    var RegisterForm = document.getElementById("RegisterForm");
+    var indicator = document.getElementById("indicator");
+                
+    MenuList.style.maxHeight = "0px";
+    
+    function toggleMenu(){
+        if(MenuList.style.maxHeight == "0px"){
+            MenuList.style.maxHeight = "200px";
+        }
+        else{
+            MenuList.style.maxHeight = "0px";
+        }
+    }
+              
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script> 
+</body>
+</html>     
