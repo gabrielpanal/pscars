@@ -1,11 +1,11 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyDzstwmX3Y-3Gv92EsTyHcJRcVOSoBv6Co",
-    authDomain: "pscars-df4a5.firebaseapp.com",
-    databaseURL: "https://pscars-df4a5-default-rtdb.firebaseio.com",
-    projectId: "pscars-df4a5",
-    storageBucket: "pscars-df4a5.appspot.com",
-    messagingSenderId: "659550077144",
-    appId: "1:659550077144:web:32b5e20d01f2c37002d7ad"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
   };
 
 // initialize firebase
