@@ -1,7 +1,7 @@
 function enter(){
     a = document.getElementById("username").value;
     b = document.getElementById("password").value;
-    if(a = 'pscars-admin' && b == '112233'){
+    if(a = '' && b == ''){
         alert('Welcome Admin!')
         window.location = "admin.html";
     }
